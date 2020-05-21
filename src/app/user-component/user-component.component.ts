@@ -9,7 +9,6 @@ import { MyserviceService, Test, Question } from '../myservice.service';
 })
 export class UserComponentComponent implements OnInit {
   obj1: any;
-  status: boolean=false;
   userId: String;
   output:any;
   testSubmited: boolean=false;
@@ -28,10 +27,7 @@ export class UserComponentComponent implements OnInit {
     this.myservice.userTest(this.userId).subscribe(data => {
       this.test = data
     });
-    if(this.test.testQuestions.size>0)
-    {
-      this.status=true
-    }
+   this.questions=this.test.testQuestions;
    
   }
   calculateTotalMarks(test: Test):any

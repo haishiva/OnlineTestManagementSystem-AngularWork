@@ -6,7 +6,7 @@
 </head>
 
 <div class="container">
-    <table class="table table-striped" *ngIf="status  else elseBlock">
+    <table class="table table-striped" *ngIf="test  else elseBlock">
         <tbody>
             <div *ngFor="let e of test.testQuestions">
                 <tr><td>{{e.questionId}}</td><td> <input required size="180" minlength="1" type="text" [(ngModel)]="e.questionTitle" readonly="readonly" #questionTitle='ngModel' name="questionTitle" ngModel class="form-control">
@@ -18,10 +18,6 @@
                 </td>
                 </tr>
             <br>
-        
-
-
-            
             </div>
         </tbody>
         <br>
